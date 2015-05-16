@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+   	<title>iBusiness E-Commerce</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+   	<!-- tem que vir depois do css do bootstrap, para sobrepor -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+  	<!-- o jquery tem que vir antes do bootstrap -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+ 	<script src="assets/js/angular.min.js"></script>
+  	<script src="assets/js/angular-ui-router.min.js"></script>
+  	<script src="assets/js/angular-locale_pt-br.js"></script>
+ 
+</head>
+
+<body ng-app="app" ng-controller="mainController as main">
+
+	<!-- Wrap, mantem a posição do rodapé relativa em relação ao conteúdo da página -->
+	<div id="wrap">
+
+		<header>
+
+			<nav class="navbar navbar-default">
+			  <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#/">Loja</a>
+		        </div>
+
+			    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar">
+
+		          <ul class="nav navbar-nav">
+		          	
+		            <li><a ui-sref="acidentes-pessoais">Acidentes Pessoais</a></li>
+		            <li><a ui-sref="viagem">Viagem</a></li>
+		            <li><a ui-sref="residencial">Residencial</a></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assistências<span class="caret"></span></a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li><a ui-sref="ass-auto">Auto</a></li>
+		                <li><a ui-sref="ass-moto">Moto</a></li>
+		              </ul>
+		            </li>
+		          </ul>
+
+
+		          <ul class="nav navbar-nav navbar-right">
+		            <li><a href="#">Atendimento</a></li>
+		            <li><a href="#">Área do cliente<span class="sr-only">(current)</span></a></li>
+		          </ul>
+
+			    </div>
+			  </div>
+			</nav>
+
+
+		</header>
+
+
+		<div class="container">
+			<!-- ANGULAR VIEWS -->
+			<div ui-view></div>
+		</div>
+
+	</div> <!-- wrap -->
+
+	<div class="container-fluid">
+		<div class="row row-centered" id="footer">
+			<h6>Copyright © 2015 Vayon. Todos os direitos reservados.</h6>
+		</div>
+	</div>
+
+			
+	<!-- main Angular app files -->
+	<script src="app/app.js"></script>
+
+</body>
+</html>
